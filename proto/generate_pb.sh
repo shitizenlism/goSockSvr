@@ -1,0 +1,1 @@
+protoc -I src/ --go_out=bin/ src/*.proto

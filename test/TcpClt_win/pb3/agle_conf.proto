@@ -1,0 +1,171 @@
+syntax = "proto3";
+
+import "commu.proto";
+
+package ivi.agle;
+
+message AgleConfMsg {
+
+	message NtpMsg {
+		bool is_enable = 1;
+		message NtpEntityMsg {
+			string server_name = 1;
+		}
+		repeated  NtpEntityMsg ntp_server = 2;
+	}
+	NtpMsg ntp_msg = 1;
+
+	message LogMsg {
+		bool is_enable = 1;
+		string log_path = 2;
+	}
+	LogMsg log_msg = 2;
+
+	message ManagementMsg {
+		bool is_enable = 1;
+		string tcp_server_ip = 2;
+		uint32 tcp_server_port = 3;
+		string client_type = 4;
+		string client_ID = 5;
+		uint32 login_interval = 6;
+	}
+	ManagementMsg management_msg = 3;
+
+	message RecordMsg {
+		bool is_enable = 1;
+		string rec_path = 2;
+		uint32 rec_recycle_days = 3;
+		uint32 rec_segment_hour = 4;
+		uint32 rec_segment_minutes = 5;
+		string rec_start_time = 6;
+		string rec_stop_time = 7;
+	}
+	RecordMsg record_msg=4;
+
+	message RtmpServerMsg {
+		bool is_enable = 1;
+
+		message ServerEntityMsg {
+			bool is_master = 1;
+			uint32 entity_id = 2;
+			string rtmp_server_url = 3;
+			string stream_name = 4;
+		}
+		repeated  ServerEntityMsg rtmp_servers = 2;
+	}
+	RtmpServerMsg rtmp_server_msg=5;
+
+	message AudiosMsg {
+		bool is_enable = 1;
+		string device_name = 2;
+		string device_path = 3;
+
+		enum EnumAudioBitrate {
+			kbps_320 = 0;
+			kbps_256 = 1;
+			kbps_128 = 2;
+			kbps_96 = 3;
+			kbps_80 = 4;
+			kbps_64 = 5;
+			kbps_48 = 6;
+			kbps_36 = 7;
+		}
+
+		enum EnumAudioFormat {
+			aac_low = 0;
+		}
+
+		enum EnumAudioSamplerate {
+			Hz_48000 = 0;
+			Hz_44100 = 1;
+			Hz_24000 = 2;
+			Hz_22050 = 3;
+			Hz_16000 = 4;
+		}
+
+		message AudioEntityMsg {
+			bool is_enable = 1;
+			uint32 entity_id = 2;
+			string channels = 3;
+
+			EnumAudioBitrate bitrate = 4;
+			EnumAudioFormat format = 5;
+			EnumAudioSamplerate samplerate = 6;
+		}
+		repeated  AudioEntityMsg audios = 4;
+	}
+	AudiosMsg audio_msg=6;
+
+	message VideosMsg {
+		bool is_enable = 1;
+		string device_name = 2;
+		string device_path = 3;
+
+		enum EnumVideoEncodeFormat {
+			x264 = 0;
+			h264_qsv = 1;
+			h264_nvenc = 2;
+		}
+
+		enum EnumVideoEncodeQuality {
+			speed = 0;
+			balance = 1;
+			quality = 2;
+		}
+
+		EnumVideoEncodeFormat video_encoder = 4;
+		EnumVideoEncodeQuality video_quality = 5;
+
+		enum EnumVideoOutSize {
+			size_1920x1080 = 0;
+			size_1280x720 = 1;
+			size_720x480 = 2;
+			size_640x480 = 3;
+			size_640x360 = 4;
+		}
+
+		enum EnumVideoBitrate {
+			kbps_3000 = 0;
+			kbps_2000 = 1;
+			kbps_1000 = 2;
+			kbps_800 = 3;
+			kbps_600 = 4;
+			kbps_500 = 5;
+			kbps_400 = 6;
+			kbps_350 = 7;
+			kbps_300 = 8;
+			kbps_200 = 9;
+			kbps_150 = 10;
+			kbps_100 = 11;
+		}
+
+		enum EnumVideoFramerate {
+			fps_30 = 0;
+			fps_25 = 1;
+			fps_20 = 2;
+			fps_15 = 3;
+		}
+
+		message CropMsg {
+			bool is_enable = 1;
+			uint32 crop_x = 2;
+			uint32 crop_y = 3;
+			uint32 crop_width = 4;
+			uint32 crop_height = 5;
+		}
+
+		message VideoEntityMsg {
+			bool is_enable = 1;
+			uint32 entity_id = 2;
+			EnumVideoOutSize outputsize = 3;
+			EnumVideoBitrate bitrate = 4;
+			EnumVideoFramerate framerate = 5;
+			uint32 keyframe_frequency = 6;
+			CropMsg crop_setting = 7;
+		}
+
+		repeated  VideoEntityMsg videos = 6;
+	}
+	VideosMsg video_msg=7;
+}
+

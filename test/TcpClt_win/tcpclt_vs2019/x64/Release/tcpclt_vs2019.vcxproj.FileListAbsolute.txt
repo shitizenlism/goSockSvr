@@ -1,0 +1,6 @@
+D:\proj\gitwork\freeman\vipoker\test\TcpClient\tcpclt_vs2019\x64\Release\tcpclt_vs2019.exe
+D:\proj\gitwork\bcMedia\bcsrs\tester\TcpClient\tcpclt_vs2019\x64\Release\tcpclt_vs2019.exe
+D:\proj\gitwork\bcMedia\bcsrs\tester\TcpClient_win\tcpclt_vs2019\x64\Release\tcpclt_vs2019.exe
+D:\proj\localprj\winReptile\refcode\TcpClt_win\tcpclt_vs2019\x64\Release\tcpclt_vs2019.exe
+E:\winprj\TcpSock\TcpClt_win\tcpclt_vs2019\x64\Release\tcpclt_vs2019.exe
+E:\goprj\workspace\examples\goSockSvr\TcpClt_win\tcpclt_vs2019\x64\Release\tcpclt_vs2019.exe

@@ -1,0 +1,9 @@
+{
+  "Debug": false,
+  "Name": "goSocket-Server",
+  "Host": "127.0.0.1",
+  "TcpPort": "17777",
+  "MaxConn": 1000,
+  "MaxPackSize": 2048,
+  "WorkerPoolSize": 5
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package pb;
+option go_package = "./;pb";
+
+//设备心跳消息
+message Ping{
+  int64 timeStamp = 1;
+  string hello = 2;
+}
+
+//obs切换场景消息
+message Scene{
+  int64 timeStamp = 1;
+  string sceneName = 2;
+}
