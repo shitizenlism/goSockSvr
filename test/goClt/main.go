@@ -6,7 +6,7 @@ import (
 	"time"
 
 	"google.golang.org/protobuf/proto"
-	"goSockSvr/client/base"
+	"goSockSvr/test/goClt/base"
 	pb "goSockSvr/proto/bin"
 	"goSockSvr/config"
 )
