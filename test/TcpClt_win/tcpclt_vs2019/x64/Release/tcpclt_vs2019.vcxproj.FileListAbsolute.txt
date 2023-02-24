@@ -4,3 +4,4 @@ D:\proj\gitwork\bcMedia\bcsrs\tester\TcpClient_win\tcpclt_vs2019\x64\Release\tcp
 D:\proj\localprj\winReptile\refcode\TcpClt_win\tcpclt_vs2019\x64\Release\tcpclt_vs2019.exe
 E:\winprj\TcpSock\TcpClt_win\tcpclt_vs2019\x64\Release\tcpclt_vs2019.exe
 E:\goprj\workspace\examples\goSockSvr\TcpClt_win\tcpclt_vs2019\x64\Release\tcpclt_vs2019.exe
+D:\github\goSockSvr\test\TcpClt_win\tcpclt_vs2019\x64\Release\tcpclt_vs2019.exe
